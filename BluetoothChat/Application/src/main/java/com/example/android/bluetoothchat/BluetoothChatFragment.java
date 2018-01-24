@@ -169,6 +169,7 @@ public class BluetoothChatFragment extends Fragment {
         // Initialize the send button with a listener that for click events
         mSendButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                //-----------------------------------------------------------------------------------------------------------------[ Click Send ]
                 // Send a message using content of the edit text widget
                 View view = getView();
                 if (null != view) {
@@ -211,6 +212,7 @@ public class BluetoothChatFragment extends Fragment {
         }
 
         // Check that there's actually something to send
+        // -----------------------------------------------------------------------------------------------------------------------[ SEND Func ]
         if (message.length() > 0) {
             // Get the message bytes and tell the BluetoothChatService to write
             byte[] send = message.getBytes();
@@ -301,10 +303,11 @@ public class BluetoothChatFragment extends Fragment {
                     mConversationArrayAdapter.add("Me:  " + writeMessage);
                     break;
                 case Constants.MESSAGE_READ:
-                    byte[] readBuf = (byte[]) msg.obj;
+                    // ----------------------------------------------------------------------------------------------[ BT Receive Data View Func ]
+                    byte[] readBuf = (byte[]) msg.obj;  // Byte단위의 Message
                     // construct a string from the valid bytes in the buffer
-                    String readMessage = new String(readBuf, 0, msg.arg1);
-                    mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
+                    String readMessage = new String(readBuf, 0, msg.arg1);  // 이게 받는 내용
+                    mConversationArrayAdapter.add(mConnectedDeviceName + "이게받는겨??" + ":  " + readMessage);
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
                     // save the connected device's name

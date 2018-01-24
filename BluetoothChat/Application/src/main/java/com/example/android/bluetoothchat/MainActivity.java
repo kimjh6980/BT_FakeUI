@@ -34,8 +34,6 @@ public class MainActivity extends FragmentActivity{
     public static final String TAG = "MainActivity";
 
     // Whether the Log Fragment is currently shown
-    private boolean mLogShown;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,18 +55,11 @@ public class MainActivity extends FragmentActivity{
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem logToggle = menu.findItem(R.id.menu_toggle_log);
-
         return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
-            case R.id.menu_toggle_log:
-                supportInvalidateOptionsMenu();
-                return true;
-        }
         return super.onOptionsItemSelected(item);
     }
 }
