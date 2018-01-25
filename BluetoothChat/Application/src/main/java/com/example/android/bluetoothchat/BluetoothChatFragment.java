@@ -16,6 +16,7 @@
 
 package com.example.android.bluetoothchat;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -59,6 +60,12 @@ public class BluetoothChatFragment extends Fragment {
     private ListView mConversationView;
     private EditText mOutEditText;
     private Button mSendButton;
+
+    // value Views
+    public TextView valueA;
+    public TextView valueB;
+    public TextView valueC;
+    public TextView valueD;
 
     /**
      * Name of the connected device
@@ -150,6 +157,11 @@ public class BluetoothChatFragment extends Fragment {
         mConversationView = (ListView) view.findViewById(R.id.in);
         mOutEditText = (EditText) view.findViewById(R.id.edit_text_out);
         mSendButton = (Button) view.findViewById(R.id.button_send);
+
+        valueA = (TextView)view.findViewById(R.id.val1num);
+        valueB = (TextView)view.findViewById(R.id.val2num);
+        valueC = (TextView)view.findViewById(R.id.val3num);
+        valueD = (TextView)view.findViewById(R.id.val4num);
     }
 
     /**
@@ -276,6 +288,8 @@ public class BluetoothChatFragment extends Fragment {
     /**
      * The Handler that gets information back from the BluetoothChatService
      */
+
+    @SuppressLint("HandlerLeak")
     private final Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -303,11 +317,20 @@ public class BluetoothChatFragment extends Fragment {
                     mConversationArrayAdapter.add("Me:  " + writeMessage);
                     break;
                 case Constants.MESSAGE_READ:
-                    // ----------------------------------------------------------------------------------------------[ BT Receive Data View Func ]
+                    // ------------------------------------------------------------------------------------------------------[ BT Receive Data View Func ]
                     byte[] readBuf = (byte[]) msg.obj;  // Byte단위의 Message
                     // construct a string from the valid bytes in the buffer
+                    // -------------------------------------------------------------------------------------------------------[ 여기서 BT 받아서 값 분별 ]
                     String readMessage = new String(readBuf, 0, msg.arg1);  // 이게 받는 내용
-                    mConversationArrayAdapter.add(mConnectedDeviceName + "이게받는겨??" + ":  " + readMessage);
+
+                    String[] BTSplit = readMessage.split("-");  // String으로 변환된 readMessage값을 - 기준으로 나눌거임 (a-b-c-d)
+
+                    for(int i=0; i<BTSplit.length; i++) {
+                        //  mConversationArrayAdapter.add(mConnectedDeviceName + "[" + i + "]" + ":  " + readMessage);  원본이얌
+                        mConversationArrayAdapter.add(mConnectedDeviceName + "[" + i + "]" + ":  " + BTSplit[i]);
+                    }
+
+                    // 만약 여기서 BT값 받아서 분별까지 된다면 mConversation(이거 채팅기록 띄우는 List임) 이거 지우고 깔면 된다. (fragment_bluetooth_chat.xml)
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
                     // save the connected device's name
