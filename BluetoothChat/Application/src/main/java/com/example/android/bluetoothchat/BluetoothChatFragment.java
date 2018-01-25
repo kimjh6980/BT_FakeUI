@@ -67,6 +67,7 @@ public class BluetoothChatFragment extends Fragment {
     public TextView valueC;
     public TextView valueD;
 
+    public TextView valuelist[] = {valueA, valueB, valueC, valueD};
     /**
      * Name of the connected device
      */
@@ -325,9 +326,16 @@ public class BluetoothChatFragment extends Fragment {
 
                     String[] BTSplit = readMessage.split("-");  // String으로 변환된 readMessage값을 - 기준으로 나눌거임 (a-b-c-d)
 
-                    for(int i=0; i<BTSplit.length; i++) {
-                        //  mConversationArrayAdapter.add(mConnectedDeviceName + "[" + i + "]" + ":  " + readMessage);  원본이얌
-                        mConversationArrayAdapter.add(mConnectedDeviceName + "[" + i + "]" + ":  " + BTSplit[i]);
+                    mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
+
+                    // 여기 -를 통해 4split이 안되면 에러나는 상황
+                    if(BTSplit.length == 4)    {
+                        for(int i=0; i<BTSplit.length; i++) {
+                            //  mConversationArrayAdapter.add(mConnectedDeviceName + "[" + i + "]" + ":  " + readMessage);  원본이얌
+                            valuelist[i].setText(BTSplit[i]);
+                        }
+                    }   else    {
+                        Toast.makeText(activity, "length over 4", Toast.LENGTH_SHORT).show();
                     }
 
                     // 만약 여기서 BT값 받아서 분별까지 된다면 mConversation(이거 채팅기록 띄우는 List임) 이거 지우고 깔면 된다. (fragment_bluetooth_chat.xml)
