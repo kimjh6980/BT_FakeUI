@@ -50,7 +50,11 @@
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
                     app:wheel_reached_width="16dp"
-                    app:wheel_unreached_width="20dp" />
+                    app:wheel_unreached_width="20dp"
+                    app:wheel_unreached_color="#ffffff"
+                    app:wheel_reached_color="#ff9292"
+                    app:wheel_pointer_color="#ff0000"
+                    />
 
             </LinearLayout>
 
@@ -70,7 +74,10 @@
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
                     app:wheel_reached_width="16dp"
-                    app:wheel_unreached_width="20dp" />
+                    app:wheel_unreached_width="20dp"
+                    app:wheel_unreached_color="#719aff"
+                    app:wheel_reached_color="#3f3b8b"
+                    app:wheel_pointer_color="#001269"/>
 
             </LinearLayout>
         </LinearLayout>

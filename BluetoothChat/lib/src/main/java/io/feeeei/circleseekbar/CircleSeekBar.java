@@ -21,6 +21,12 @@ import android.view.View;
  */
 public class CircleSeekBar extends View {
 
+    //------컬러선언
+    public static int wheel_color = R.color.def_wheel_color;
+    public static int reached_color = R.color.def_reached_color;
+    public static int pointer_color = R.color.def_pointer_color;
+    //-----------------------
+
     private static final double RADIAN = 180 / Math.PI;
 
     private static final String INATANCE_STATE = "state";
@@ -135,14 +141,17 @@ public class CircleSeekBar extends View {
         mMaxProcess = a.getInt(R.styleable.CircleSeekBar_wheel_max_process, 100);
         mCurProcess = a.getInt(R.styleable.CircleSeekBar_wheel_cur_process, 0);
         if (mCurProcess > mMaxProcess) mCurProcess = mMaxProcess;
-        mReachedColor = a.getColor(R.styleable.CircleSeekBar_wheel_reached_color, getColor(R.color.def_reached_color));
+        // def_wheel_color----------------------------------------------------------------------------------------------------------------------------------------------------
+        mReachedColor = a.getColor(R.styleable.CircleSeekBar_wheel_reached_color, getColor(reached_color));
+        // def_wheel_color----------------------------------------------------------------------------------------------------------------------------------------------------
         mUnreachedColor = a.getColor(R.styleable.CircleSeekBar_wheel_unreached_color,
-                getColor(R.color.def_wheel_color));
+                getColor(wheel_color));
         mUnreachedWidth = a.getDimension(R.styleable.CircleSeekBar_wheel_unreached_width,
                 getDimen(R.dimen.def_wheel_width));
         isHasReachedCornerRound = a.getBoolean(R.styleable.CircleSeekBar_wheel_reached_has_corner_round, true);
         mReachedWidth = a.getDimension(R.styleable.CircleSeekBar_wheel_reached_width, mUnreachedWidth);
-        mPointerColor = a.getColor(R.styleable.CircleSeekBar_wheel_pointer_color, getColor(R.color.def_pointer_color));
+        // def_wheel_color----------------------------------------------------------------------------------------------------------------------------------------------------
+        mPointerColor = a.getColor(R.styleable.CircleSeekBar_wheel_pointer_color, getColor(pointer_color));
         mPointerRadius = a.getDimension(R.styleable.CircleSeekBar_wheel_pointer_radius, mReachedWidth / 2);
         isHasWheelShadow = a.getBoolean(R.styleable.CircleSeekBar_wheel_has_wheel_shadow, false);
         if (isHasWheelShadow) {
