@@ -38,40 +38,56 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <io.feeeei.circleseekbar.CircleSeekBar
                     android:id="@+id/progress1"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:padding="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     app:wheel_can_touch="false"
                     app:wheel_max_process="100"
-                    app:wheel_pointer_radius="6dp"
-                    app:wheel_reached_width="16dp"
-                    app:wheel_unreached_width="20dp"
-                    app:wheel_unreached_color="#ff9d9d"
-                    app:wheel_reached_color="#ff4949"
                     app:wheel_pointer_color="#c60000"
-                    />
+                    app:wheel_pointer_radius="6dp"
+                    app:wheel_reached_color="#ff4949"
+                    app:wheel_reached_width="16dp"
+                    app:wheel_unreached_color="#ff9d9d"
+                    app:wheel_unreached_width="20dp" />
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/value1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="20dp"
+                    android:textColor="#c60000"
+                    android:text="0"
+                    android:textSize="60dp" />
 
-            <LinearLayout
+
+            </FrameLayout>
+
+            <FrameLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <io.feeeei.circleseekbar.CircleSeekBar
                     android:id="@+id/progress2"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:padding="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     app:wheel_can_touch="false"
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
@@ -81,7 +97,16 @@
                     app:wheel_reached_color="#3953ff"
                     app:wheel_pointer_color="#000eae"/>
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/value2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="20dp"
+                    android:textColor="#000eae"
+                    android:text="0"
+                    android:textSize="60dp" />
+            </FrameLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -89,17 +114,20 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal">
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_weight="1">
 
                 <io.feeeei.circleseekbar.CircleSeekBar
                     android:id="@+id/progress3"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:padding="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     app:wheel_can_touch="false"
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
@@ -109,19 +137,31 @@
                     app:wheel_reached_color="#d059ff"
                     app:wheel_pointer_color="#b700ff"/>
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/value3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="20dp"
+                    android:text="0"
+                    android:textColor="#b700ff"
+                    android:textSize="60dp" />
+            </FrameLayout>
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_weight="1">
 
                 <io.feeeei.circleseekbar.CircleSeekBar
                     android:id="@+id/progress4"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:padding="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     app:wheel_can_touch="false"
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
@@ -131,7 +171,16 @@
                     app:wheel_reached_color="#6cff66"
                     app:wheel_pointer_color="#07ca00"/>
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/value4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="20dp"
+                    android:textColor="#07ca00"
+                    android:text="0"
+                    android:textSize="60dp" />
+            </FrameLayout>
         </LinearLayout>
     </LinearLayout>
 

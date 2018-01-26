@@ -174,6 +174,10 @@ public class BluetoothChatFragment extends Fragment {
         mProgress3 = (CircleSeekBar) view.findViewById(R.id.progress3);
         mProgress4 = (CircleSeekBar) view.findViewById(R.id.progress4);
 
+        valueA = (TextView) view.findViewById(R.id.value1);
+        valueB = (TextView) view.findViewById(R.id.value2);
+        valueC = (TextView) view.findViewById(R.id.value3);
+        valueD = (TextView) view.findViewById(R.id.value4);
 
     }
 
@@ -336,9 +340,13 @@ public class BluetoothChatFragment extends Fragment {
                         int val2 = Integer.valueOf(BTSplit[1]);
                         int val3 = Integer.valueOf(BTSplit[2]);
                         int val4 = Integer.valueOf(BTSplit[3]);
+                        valueA.setText(String.valueOf(val1));
                         mProgress1.setCurProcess(val1);
+                        valueB.setText(String.valueOf(val2));
                         mProgress2.setCurProcess(val2);
+                        valueC.setText(String.valueOf(val3));
                         mProgress3.setCurProcess(val3);
+                        valueD.setText(String.valueOf(val4));
                         mProgress4.setCurProcess(val4);
                         //  값 받아서 넘김
                         Toast.makeText(getActivity(), BTSplit[0] + "/"+BTSplit[1] + "/"+BTSplit[2] + "/"+BTSplit[3], Toast.LENGTH_SHORT).show();
