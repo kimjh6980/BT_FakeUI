@@ -328,7 +328,7 @@ public class BluetoothChatFragment extends Fragment {
                     // -------------------------------------------------------------------------------------------------------[ 여기서 BT 받아서 값 분별 ]
                     String readMessage = new String(readBuf, 0, msg.arg1);  // 이게 받는 내용
 
-                    String[] BTSplit = readMessage.split("-");  // String으로 변환된 readMessage값을 - 기준으로 나눌거임 (a-b-c-d)
+                    String[] BTSplit = readMessage.split(",");  // String으로 변환된 readMessage값을 - 기준으로 나눌거임 (a-b-c-d)
 
                     mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
 
@@ -349,7 +349,6 @@ public class BluetoothChatFragment extends Fragment {
                         valueD.setText(String.valueOf(val4));
                         mProgress4.setCurProcess(val4);
                         //  값 받아서 넘김
-                        Toast.makeText(getActivity(), BTSplit[0] + "/"+BTSplit[1] + "/"+BTSplit[2] + "/"+BTSplit[3], Toast.LENGTH_SHORT).show();
 
                         // Seekbar에 표시
                         start1(val1);
