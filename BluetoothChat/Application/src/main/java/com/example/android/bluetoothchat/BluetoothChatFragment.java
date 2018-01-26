@@ -25,6 +25,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -44,11 +45,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import io.feeeei.circleseekbar.CircleSeekBar;
+
 /**
  * This fragment controls Bluetooth to communicate with other devices.
  */
 public class BluetoothChatFragment extends Fragment {
 
+    //-----------------------------------------------------------------------------------------------------------
+
+    //-----------------------------------------------------------------------------------------------------------
     private static final String TAG = "BluetoothChatFragment";
 
     // Intent request codes
@@ -92,6 +98,11 @@ public class BluetoothChatFragment extends Fragment {
      * Member object for the chat services
      */
     private BluetoothChatService mChatService = null;
+
+    public CircleSeekBar mProgress1;
+    public CircleSeekBar mProgress2;
+    public CircleSeekBar mProgress3;
+    public CircleSeekBar mProgress4;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -155,14 +166,16 @@ public class BluetoothChatFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        // setContentView 이전에 find를 할 시 NullPointerException이 발생함. 이에 따라, View가 Created 된 이후에 Find
         mConversationView = (ListView) view.findViewById(R.id.in);
         mOutEditText = (EditText) view.findViewById(R.id.edit_text_out);
         mSendButton = (Button) view.findViewById(R.id.button_send);
+        mProgress1 = (CircleSeekBar) view.findViewById(R.id.progress1);
+        mProgress2 = (CircleSeekBar) view.findViewById(R.id.progress2);
+        mProgress3 = (CircleSeekBar) view.findViewById(R.id.progress3);
+        mProgress4 = (CircleSeekBar) view.findViewById(R.id.progress4);
 
-        valueA = (TextView)view.findViewById(R.id.val1num);
-        valueB = (TextView)view.findViewById(R.id.val2num);
-        valueC = (TextView)view.findViewById(R.id.val3num);
-        valueD = (TextView)view.findViewById(R.id.val4num);
+
     }
 
     /**
@@ -292,6 +305,7 @@ public class BluetoothChatFragment extends Fragment {
 
     @SuppressLint("HandlerLeak")
     private final Handler mHandler = new Handler() {
+
         @Override
         public void handleMessage(Message msg) {
             FragmentActivity activity = getActivity();
@@ -332,10 +346,22 @@ public class BluetoothChatFragment extends Fragment {
                     if (BTSplit.length == 4) {
                         //  mConversationArrayAdapter.add(mConnectedDeviceName + "[" + i + "]" + ":  " + readMessage);  원본이얌
                         //  valuelist[i].setText(BTSplit[i]);
-                        valueA.setText(BTSplit[0]);
-                        valueB.setText(BTSplit[1]);
-                        valueC.setText(BTSplit[2]);
-                        valueD.setText(BTSplit[3]);
+                        int val1 = Integer.valueOf(BTSplit[0]);
+                        int val2 = Integer.valueOf(BTSplit[1]);
+                        int val3 = Integer.valueOf(BTSplit[2]);
+                        int val4 = Integer.valueOf(BTSplit[3]);
+                        mProgress1.setCurProcess(val1);
+                        mProgress2.setCurProcess(val2);
+                        mProgress3.setCurProcess(val3);
+                        mProgress4.setCurProcess(val4);
+                        //  값 받아서 넘김
+                        Toast.makeText(getActivity(), BTSplit[0] + "/"+BTSplit[1] + "/"+BTSplit[2] + "/"+BTSplit[3], Toast.LENGTH_SHORT).show();
+
+                        // Seekbar에 표시
+                        start1(val1);
+                        start2(val2);
+                        start3(val3);
+                        start4(val4);
                     }   else    {
                         Toast.makeText(activity, "length is not 4",Toast.LENGTH_SHORT).show();
                     }
@@ -435,4 +461,80 @@ public class BluetoothChatFragment extends Fragment {
         return false;
     }
 
+    private void start1(final int value) {
+        new Thread() {
+            @Override
+            public void run() {
+                for (int i = 0; i <= value; i++) {
+                    mHandler2.sendEmptyMessage(i);
+                    SystemClock.sleep(16);
+                }
+            }
+        }.start();
+    }
+
+    private void start2(final int value) {
+        new Thread() {
+            @Override
+            public void run() {
+                for (int i = 0; i <= value; i++) {
+                    mHandler3.sendEmptyMessage(i);
+                    SystemClock.sleep(16);
+                }
+            }
+        }.start();
+    }
+    private void start3(final int value) {
+        new Thread() {
+            @Override
+            public void run() {
+                for (int i = 0; i <= value; i++) {
+                    mHandler4.sendEmptyMessage(i);
+                    SystemClock.sleep(16);
+                }
+            }
+        }.start();
+    }
+    private void start4(final int value) {
+        new Thread() {
+            @Override
+            public void run() {
+                for (int i = 0; i <= value; i++) {
+                    mHandler5.sendEmptyMessage(i);
+                    SystemClock.sleep(16);
+                }
+            }
+        }.start();
+    }
+    private Handler mHandler2 = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            int value = msg.what;
+            mProgress1.setCurProcess(value);
+        }
+    };
+
+    private Handler mHandler3 = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            int value = msg.what;
+            mProgress2.setCurProcess(value);
+        }
+    };
+
+    private Handler mHandler4 = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            int value = msg.what;
+            mProgress3.setCurProcess(value);
+        }
+    };
+
+    private Handler mHandler5 = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            int value = msg.what;
+            mProgress4.setCurProcess(value);
+        }
+    };
 }
