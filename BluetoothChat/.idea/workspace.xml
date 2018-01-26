@@ -45,24 +45,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BluetoothChatFragment.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BluetoothChatFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="535" column="24" lean-forward="false" selection-start-line="535" selection-start-column="24" selection-end-line="535" selection-end-column="24" />
+            <state relative-caret-position="368">
+              <caret line="206" column="70" lean-forward="true" selection-start-line="206" selection-start-column="70" selection-end-line="206" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10793#15125#0" expanded="true" />
-                <element signature="e#15124#15125#0" expanded="true" />
-                <element signature="e#19564#19741#0" expanded="true" />
-                <element signature="e#19740#19741#0" expanded="true" />
-                <element signature="e#19776#19953#0" expanded="true" />
-                <element signature="e#19952#19953#0" expanded="true" />
-                <element signature="e#19988#20165#0" expanded="true" />
-                <element signature="e#20164#20165#0" expanded="true" />
-                <element signature="e#20200#20377#0" expanded="true" />
-                <element signature="e#20376#20377#0" expanded="true" />
+                <element signature="e#9942#14274#0" expanded="true" />
+                <element signature="e#14273#14274#0" expanded="true" />
+                <element signature="e#18713#18890#0" expanded="true" />
+                <element signature="e#18889#18890#0" expanded="true" />
+                <element signature="e#18925#19102#0" expanded="true" />
+                <element signature="e#19101#19102#0" expanded="true" />
+                <element signature="e#19137#19314#0" expanded="true" />
+                <element signature="e#19313#19314#0" expanded="true" />
+                <element signature="e#19349#19526#0" expanded="true" />
+                <element signature="e#19525#19526#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/message.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,14 +130,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_bluetooth_chat.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fragment_bluetooth_chat.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/fragment_bluetooth_chat.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+            <state relative-caret-position="326">
+              <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -136,18 +149,6 @@
             <state relative-caret-position="495">
               <caret line="348" column="50" lean-forward="false" selection-start-line="348" selection-start-column="50" selection-end-line="348" selection-end-column="50" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#2241#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -182,6 +183,7 @@
       <find>find</find>
       <find>/*</find>
       <find>mHandler</find>
+      <find>setOn</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -2693,8 +2695,9 @@
         <option value="$PROJECT_DIR$/Application/build.gradle" />
         <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/MainActivity.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_bluetooth_chat.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout/message.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java" />
       </list>
     </option>
   </component>
@@ -2951,7 +2954,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516951497888" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516952586351" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2999,7 +3002,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516951497888" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516952586352" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3161,7 +3164,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516951497889" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516952586352" />
       </method>
     </configuration>
     <list size="1">
@@ -3211,7 +3214,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3250,16 +3253,16 @@
           <caret line="338" column="33" lean-forward="true" selection-start-line="338" selection-start-column="33" selection-end-line="338" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10793#15125#0" expanded="true" />
-            <element signature="e#15124#15125#0" expanded="true" />
-            <element signature="e#19564#19741#0" expanded="true" />
-            <element signature="e#19740#19741#0" expanded="true" />
-            <element signature="e#19776#19953#0" expanded="true" />
-            <element signature="e#19952#19953#0" expanded="true" />
-            <element signature="e#19988#20165#0" expanded="true" />
-            <element signature="e#20164#20165#0" expanded="true" />
-            <element signature="e#20200#20377#0" expanded="true" />
-            <element signature="e#20376#20377#0" expanded="true" />
+            <element signature="e#9942#14274#0" expanded="true" />
+            <element signature="e#14273#14274#0" expanded="true" />
+            <element signature="e#18713#18890#0" expanded="true" />
+            <element signature="e#18889#18890#0" expanded="true" />
+            <element signature="e#18925#19102#0" expanded="true" />
+            <element signature="e#19101#19102#0" expanded="true" />
+            <element signature="e#19137#19314#0" expanded="true" />
+            <element signature="e#19313#19314#0" expanded="true" />
+            <element signature="e#19349#19526#0" expanded="true" />
+            <element signature="e#19525#19526#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3360,16 +3363,16 @@
           <caret line="334" column="21" lean-forward="true" selection-start-line="334" selection-start-column="21" selection-end-line="334" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10793#15125#0" expanded="true" />
-            <element signature="e#15124#15125#0" expanded="true" />
-            <element signature="e#19564#19741#0" expanded="true" />
-            <element signature="e#19740#19741#0" expanded="true" />
-            <element signature="e#19776#19953#0" expanded="true" />
-            <element signature="e#19952#19953#0" expanded="true" />
-            <element signature="e#19988#20165#0" expanded="true" />
-            <element signature="e#20164#20165#0" expanded="true" />
-            <element signature="e#20200#20377#0" expanded="true" />
-            <element signature="e#20376#20377#0" expanded="true" />
+            <element signature="e#9942#14274#0" expanded="true" />
+            <element signature="e#14273#14274#0" expanded="true" />
+            <element signature="e#18713#18890#0" expanded="true" />
+            <element signature="e#18889#18890#0" expanded="true" />
+            <element signature="e#18925#19102#0" expanded="true" />
+            <element signature="e#19101#19102#0" expanded="true" />
+            <element signature="e#19137#19314#0" expanded="true" />
+            <element signature="e#19313#19314#0" expanded="true" />
+            <element signature="e#19349#19526#0" expanded="true" />
+            <element signature="e#19525#19526#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3388,16 +3391,16 @@
           <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10793#15125#0" expanded="true" />
-            <element signature="e#15124#15125#0" expanded="true" />
-            <element signature="e#19564#19741#0" expanded="true" />
-            <element signature="e#19740#19741#0" expanded="true" />
-            <element signature="e#19776#19953#0" expanded="true" />
-            <element signature="e#19952#19953#0" expanded="true" />
-            <element signature="e#19988#20165#0" expanded="true" />
-            <element signature="e#20164#20165#0" expanded="true" />
-            <element signature="e#20200#20377#0" expanded="true" />
-            <element signature="e#20376#20377#0" expanded="true" />
+            <element signature="e#9942#14274#0" expanded="true" />
+            <element signature="e#14273#14274#0" expanded="true" />
+            <element signature="e#18713#18890#0" expanded="true" />
+            <element signature="e#18889#18890#0" expanded="true" />
+            <element signature="e#18925#19102#0" expanded="true" />
+            <element signature="e#19101#19102#0" expanded="true" />
+            <element signature="e#19137#19314#0" expanded="true" />
+            <element signature="e#19313#19314#0" expanded="true" />
+            <element signature="e#19349#19526#0" expanded="true" />
+            <element signature="e#19525#19526#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3495,16 +3498,16 @@
           <caret line="158" column="10" lean-forward="false" selection-start-line="158" selection-start-column="10" selection-end-line="158" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10793#15125#0" expanded="true" />
-            <element signature="e#15124#15125#0" expanded="true" />
-            <element signature="e#19564#19741#0" expanded="true" />
-            <element signature="e#19740#19741#0" expanded="true" />
-            <element signature="e#19776#19953#0" expanded="true" />
-            <element signature="e#19952#19953#0" expanded="true" />
-            <element signature="e#19988#20165#0" expanded="true" />
-            <element signature="e#20164#20165#0" expanded="true" />
-            <element signature="e#20200#20377#0" expanded="true" />
-            <element signature="e#20376#20377#0" expanded="true" />
+            <element signature="e#9942#14274#0" expanded="true" />
+            <element signature="e#14273#14274#0" expanded="true" />
+            <element signature="e#18713#18890#0" expanded="true" />
+            <element signature="e#18889#18890#0" expanded="true" />
+            <element signature="e#18925#19102#0" expanded="true" />
+            <element signature="e#19101#19102#0" expanded="true" />
+            <element signature="e#19137#19314#0" expanded="true" />
+            <element signature="e#19313#19314#0" expanded="true" />
+            <element signature="e#19349#19526#0" expanded="true" />
+            <element signature="e#19525#19526#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3596,17 +3599,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/device_name.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/message.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
@@ -3715,26 +3707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="535" column="24" lean-forward="false" selection-start-line="535" selection-start-column="24" selection-end-line="535" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10793#15125#0" expanded="true" />
-            <element signature="e#15124#15125#0" expanded="true" />
-            <element signature="e#19564#19741#0" expanded="true" />
-            <element signature="e#19740#19741#0" expanded="true" />
-            <element signature="e#19776#19953#0" expanded="true" />
-            <element signature="e#19952#19953#0" expanded="true" />
-            <element signature="e#19988#20165#0" expanded="true" />
-            <element signature="e#20164#20165#0" expanded="true" />
-            <element signature="e#20200#20377#0" expanded="true" />
-            <element signature="e#20376#20377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -3751,9 +3723,40 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="326">
+          <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/message.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="206" column="70" lean-forward="true" selection-start-line="206" selection-start-column="70" selection-end-line="206" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9942#14274#0" expanded="true" />
+            <element signature="e#14273#14274#0" expanded="true" />
+            <element signature="e#18713#18890#0" expanded="true" />
+            <element signature="e#18889#18890#0" expanded="true" />
+            <element signature="e#18925#19102#0" expanded="true" />
+            <element signature="e#19101#19102#0" expanded="true" />
+            <element signature="e#19137#19314#0" expanded="true" />
+            <element signature="e#19313#19314#0" expanded="true" />
+            <element signature="e#19349#19526#0" expanded="true" />
+            <element signature="e#19525#19526#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

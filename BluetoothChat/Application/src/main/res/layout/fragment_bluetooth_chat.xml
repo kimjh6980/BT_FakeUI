@@ -18,7 +18,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#020202"
+    >
 
     <LinearLayout
         android:id="@+id/valuestore"
@@ -43,18 +45,13 @@
                     android:id="@+id/progress1"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:padding="8dp"
+                    android:padding="15dp"
                     app:wheel_can_touch="false"
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
                     app:wheel_reached_width="16dp"
                     app:wheel_unreached_width="20dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Value2" />
             </LinearLayout>
 
             <LinearLayout
@@ -74,12 +71,6 @@
                     app:wheel_pointer_radius="6dp"
                     app:wheel_reached_width="16dp"
                     app:wheel_unreached_width="20dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Value1" />
 
             </LinearLayout>
         </LinearLayout>
@@ -107,11 +98,6 @@
                     app:wheel_reached_width="16dp"
                     app:wheel_unreached_width="20dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Value3" />
             </LinearLayout>
 
             <LinearLayout
@@ -132,12 +118,6 @@
                     app:wheel_reached_width="16dp"
                     app:wheel_unreached_width="20dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Value4" />
-
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -148,26 +128,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:stackFromBottom="true"
-        android:transcriptMode="alwaysScroll" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/edit_text_out"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/button_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/send" />
-    </LinearLayout>
-
+        android:transcriptMode="alwaysScroll"
+        />
 </LinearLayout>
