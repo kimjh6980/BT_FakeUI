@@ -19,8 +19,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#020202"
     >
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
 
     <LinearLayout
         android:id="@+id/valuestore"
@@ -45,15 +48,15 @@
                     android:id="@+id/progress1"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:padding="15dp"
+                    android:padding="20dp"
                     app:wheel_can_touch="false"
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
                     app:wheel_reached_width="16dp"
                     app:wheel_unreached_width="20dp"
-                    app:wheel_unreached_color="#ffffff"
-                    app:wheel_reached_color="#ff9292"
-                    app:wheel_pointer_color="#ff0000"
+                    app:wheel_unreached_color="#ff9d9d"
+                    app:wheel_reached_color="#ff4949"
+                    app:wheel_pointer_color="#c60000"
                     />
 
             </LinearLayout>
@@ -68,16 +71,15 @@
                     android:id="@+id/progress2"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_centerInParent="true"
-                    android:padding="8dp"
+                    android:padding="20dp"
                     app:wheel_can_touch="false"
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
                     app:wheel_reached_width="16dp"
                     app:wheel_unreached_width="20dp"
-                    app:wheel_unreached_color="#719aff"
-                    app:wheel_reached_color="#3f3b8b"
-                    app:wheel_pointer_color="#001269"/>
+                    app:wheel_unreached_color="#7795ff"
+                    app:wheel_reached_color="#3953ff"
+                    app:wheel_pointer_color="#000eae"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -97,13 +99,15 @@
                     android:id="@+id/progress3"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_centerInParent="true"
-                    android:padding="8dp"
+                    android:padding="20dp"
                     app:wheel_can_touch="false"
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
                     app:wheel_reached_width="16dp"
-                    app:wheel_unreached_width="20dp" />
+                    app:wheel_unreached_width="20dp"
+                    app:wheel_unreached_color="#e8afff"
+                    app:wheel_reached_color="#d059ff"
+                    app:wheel_pointer_color="#b700ff"/>
 
             </LinearLayout>
 
@@ -117,17 +121,25 @@
                     android:id="@+id/progress4"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_centerInParent="true"
-                    android:padding="8dp"
+                    android:padding="20dp"
                     app:wheel_can_touch="false"
                     app:wheel_max_process="100"
                     app:wheel_pointer_radius="6dp"
                     app:wheel_reached_width="16dp"
-                    app:wheel_unreached_width="20dp" />
+                    app:wheel_unreached_width="20dp"
+                    app:wheel_unreached_color="#cfffcd"
+                    app:wheel_reached_color="#6cff66"
+                    app:wheel_pointer_color="#07ca00"/>
 
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <ListView
         android:id="@+id/in"
@@ -136,5 +148,10 @@
         android:layout_weight="1"
         android:stackFromBottom="true"
         android:transcriptMode="alwaysScroll"
-        />
+        >
+    </ListView>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 </LinearLayout>
